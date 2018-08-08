@@ -1,17 +1,91 @@
 @import '~@angular/material/theming';
 @include mat-core();
 
-$custom-primary: mat-palette($mat-gray, 900);
-$custom-accent: mat-palette($mat-red, 900);
+
+
+$md-tmablue: (
+    50 : #e7eef4,
+    100 : #c2d4e3,
+    200 : #9ab7d1,
+    300 : #719abf,
+    400 : #5284b1,
+    500 : #346ea3,
+    600 : #2f669b,
+    700 : #275b91,
+    800 : #215188,
+    900 : #153f77,
+    A100 : #adcdff,
+    A200 : #7aafff,
+    A400 : #4790ff,
+    A700 : #2e80ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #ffffff,
+    )
+);
+
+$md-tmared: (
+    50 : #f2e6e9,
+    100 : #e0c0c7,
+    200 : #cb96a2,
+    300 : #b66c7d,
+    400 : #a64d61,
+    500 : #962d45,
+    600 : #8e283e,
+    700 : #832236,
+    800 : #791c2e,
+    900 : #68111f,
+    A100 : #ff9dab,
+    A200 : #ff6a7e,
+    A400 : #ff3752,
+    A700 : #ff1e3c,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+
+$custom-primary: mat-palette($md-tmablue, 500);
+$custom-accent: mat-palette($md-tmared, 500);
 
 $custom-theme: mat-light-theme($custom-primary, $custom-accent);
 @include angular-material-theme($custom-theme);
 
-$alt-primary: mat-palette($mat-yellow, 600);
-$alt-accent: mat-palette($mat-grey, 200);
+// Alternate theme
+$alt-primary: mat-palette($mat-blue, 900);
+$alt-accent: mat-palette($mat-blue, 100);
 
 $custom-theme: mat-light-theme($alt-primary, $alt-accent);
 
 .alternative {
     @include angular-material-theme($custom-theme);
 }
+
+
+
